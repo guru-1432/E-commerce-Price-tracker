@@ -10,6 +10,8 @@ app = Flask(__name__)
 with open('config.json', 'r') as config_file:
     config_json = json.load(config_file)
 
+ 
+ 
 url = config_json['url']
 web_hook = config_json['web_hook']
 scheduler_interval = config_json['Scheduler_interval'] 
