@@ -17,8 +17,9 @@ scheduler_interval = config_json['Scheduler_interval']
 
 # Method to send slack notification
 def notification(message):
-    msg_post = json.dumps({'text': message})
-    response = requests.post(web_hook,data = msg_post)
+    if web_hook:
+        msg_post = json.dumps({'text': message})
+        response = requests.post(web_hook,data = msg_post)
 
 def scraper():
     print('in scraper')
