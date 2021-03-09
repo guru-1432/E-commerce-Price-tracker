@@ -71,7 +71,7 @@ def status():
     status  = {0 : 'STOPPED' , 1: 'RUNNING',2: 'PAUSED'}
     return str(status[scheduler.state])
     
-
+# Start Flask app
 if __name__  == "__main__":
     app.run(debug=True)
 
